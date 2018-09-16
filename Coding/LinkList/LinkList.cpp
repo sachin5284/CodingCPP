@@ -9,6 +9,10 @@ int main()
     l.AddNode(50);
     l.PrintList();
     cout<<l.DetectLoop()<<endl;
-    cout<<"Hello World"<<endl;
+    //l.MakeLoop();
+
+    LinkList* l2=l.ReverseList();
+    l2->PrintList();
+    // cs// cout<<l.FindLoopLength();
     return 0;
 }
