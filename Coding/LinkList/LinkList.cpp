@@ -1,7 +1,10 @@
 #include "LinkList.h"
-
+#include <bits/stdc++.h>
 int main()
 {
+    priority_queue<int,vector<int>,greater<int>> q;
+    queue<int> qp;
+    q.push(10);
     LinkList l(10);
     l.AddNode(20);
     l.AddNode(30);

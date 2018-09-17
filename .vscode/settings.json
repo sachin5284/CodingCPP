@@ -1,5 +1,25 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "stack": "cpp",
+        "queue": "cpp",
+        "xstddef": "cpp",
+        "bitset": "cpp",
+        "complex": "cpp",
+        "vector": "cpp",
+        "random": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp",
+        "algorithm": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "regex": "cpp",
+        "xhash": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp"
     }
 }
