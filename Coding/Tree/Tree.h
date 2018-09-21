@@ -54,6 +54,11 @@ class Tree
         {
             ReplaceNodeWithLowest(root,key);
         }
+
+        void PrintLeftSide()
+        {
+            PrintLeftSide(root);
+        }
          
 
     private:
@@ -62,6 +67,7 @@ class Tree
         void AddNode(int val,node** _root);
         void LevelOrderTraversal(node* root);
         void ReplaceNodeWithLowest(node * root,int key);
+        void PrintLeftSide(node* root);
 
 };
 
@@ -92,18 +98,29 @@ void Tree::AddNode(int val,node** _root)
     return;
     }
     
-    if((*_root)->left==NULL && (*_root)->data>val)
+    if((*_root)->data > val)
     {
-        (*_root)->left = new node(val);
-        return;
+        if((*_root)->left==NULL)
+       { 
+           (*_root)->left = new node(val);
+            return;
+        }
+        else {
+            AddNode(val,&(*_root)->left);
+        }
     }
-    if((*_root)->right==NULL)
+    else
     {
-        (*_root)->right = new node(val);
-        return;
+        if((*_root)->right==NULL)
+        {
+            (*_root)->right = new node(val);
+            return;
+        }
+        else{
+            AddNode(val,&(*_root)->right);
+        }
     }
-    if((*_root)->data<val)AddNode(val,&(*_root)->right);
-    AddNode(val,&(*_root)->left);
+    
     
 }
 
@@ -203,4 +220,17 @@ void Tree::ReplaceNodeWithLowest(node * root,int key)
                 q.push(temp->left); 
         } 
     }
+}
+
+void Tree::PrintLeftSide(node* root)
+{
+    if(root)
+    {
+        cout<<root->data<<endl;
+        if(root->left)
+            PrintLeftSide(root->left);
+        else
+            PrintLeftSide(root->right);
+    }
+    return;
 }
