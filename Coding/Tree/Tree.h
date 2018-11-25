@@ -32,6 +32,16 @@ class Tree
         {
             int height =0;
             return Diameter(root,&height);
+        }
+        void AddNodes(vector<int> val)
+        {
+            
+            for(int i :val)
+            {
+                AddNode(i);
+            }
+            
+            
         }       
 
         void AddNode(int val)
