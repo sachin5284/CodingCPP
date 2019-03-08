@@ -1,5 +1,6 @@
 #include "LinkList.h"
-#include <bits/stdc++.h>
+#include<queue>
+
 int main()
 {
     priority_queue<int,vector<int>,greater<int>> q;
