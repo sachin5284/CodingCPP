@@ -2,6 +2,9 @@
     "files.associations": {
         "xstddef": "cpp",
         "iostream": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "vector": "cpp",
+        "stack": "cpp",
+        "thread": "cpp"
     }
 }

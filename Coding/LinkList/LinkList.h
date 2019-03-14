@@ -42,6 +42,7 @@ class LinkList
             return new LinkList(temp);
             
         }
+        
         void ReverseNode(Node** head)
         {
             Node* first = *head;

@@ -1,44 +1,15 @@
-#include<iostream>
-#include<list>
+#include "Graph.h"
 using namespace std;
 
-class Graph
-{
-    private:
-        int node;
-        list<int> *adj;
-    
-    public:
-        Graph(int node)
-        {
-            this->node=node;
-            this->adj = new list<int>[node];
-            
-        }
-
-        void addNode(int node,int edge)
-        {
-            this->adj[node].push_back(edge);
-        }
-
-        void printGraph()
-        {
-            for(auto i=0;i<this->node;i++)
-            {
-                cout<<i<<endl;
-                for(auto j:this->adj[i])
-                {
-                    cout<<" "<<j;
-                }
-                cout<<endl;
-            }
-        }
-};
 int main()
 {
-    Graph g(10);
-    g.addNode(1,7);
-    g.addNode(4,8);
-    g.printGraph();
+    Graph g(6);
+    g.addEdge(2,3);
+    g.addEdge(3,1);
+    g.addEdge(4,0);
+    g.addEdge(4,1);
+    g.addEdge(5,0);
+    g.addEdge(5,2);
+    g.DFS(4);
     //cout<<"HellO World..!!"<<endl;
 }
