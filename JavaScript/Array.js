@@ -1,8 +1,13 @@
 var a = [2,1,3,4,5];
 a=a.map(x=>x%3);
+a.forEach(x=>{
+  x+=2
+});
+
 function f(a)
 {
     a.forEach(element => {
+
         console.log(element);
     });
     a.length
