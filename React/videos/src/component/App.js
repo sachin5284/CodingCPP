@@ -31,12 +31,13 @@ class App extends Component
     render(){
         return (
             <div className="ui Container">
+                <button>Select to edit</button>
                 <SearchBar onFormSubmit={this.onTermSubmit}/>
                 <div className="ui grid">
                 <div className="ui row">
-                    <div className="eleven wide column">
+                    {/* <div className="eleven wide column">
                         <VideoDetails selectedVideo={this.state.selectedVideo}/>
-                    </div>
+                    </div> */}
                     <div className="five wide columne">
                         <VideoList onVideoSelect={this.onVideoSelect} video={this.state.videos}/>
                     </div>

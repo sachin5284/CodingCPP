@@ -7,6 +7,7 @@ const VideoItem = ({video,onVideoSelect}) =>{
             <div className="content">
                 <div className="header">{video.snippet.title}</div>
                 <div className="description">{video.snippet.description}</div>
+                <button>Edit</button>
             </div>
         </div>
 };

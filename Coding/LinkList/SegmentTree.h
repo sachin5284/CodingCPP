@@ -34,7 +34,9 @@ void SegmentTree::createSegmentTree()
     int height = ceil(log2(this->size));
     this->segmentTreeSize = 2*((int)pow(2,height))-1;
     this->segmentTreeArr = new int[segmentTreeSize];
-    for(int i=0;i<segmentTreeSize;i++)this->segmentTreeArr[i]=0;
+    for(int i=0;i<segmentTreeSize;i++)
+        this->segmentTreeArr[i]=0;
+        
     this->createSegmentTree(0,size-1,0);
 }
 

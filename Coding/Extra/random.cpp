@@ -1,18 +1,26 @@
-// C++ program for above implementation
 #include <iostream>
-#include "Segment_Tree.h"
-#include<unordered_map>
-// #include<list>
-// #define MOD 1000000007
 using namespace std;
-
-// Driver code
+int gcd(int a, int b)
+{
+    
+    if (a == 0)
+       return b;
+    if (b == 0)
+       return a;
+   
+    
+    if (a == b)
+        return a;
+   
+    
+    if (a > b)
+        return gcd(a-b, b);
+    return gcd(a, b-a);
+}
+   
 int main()
 {
-    int a[]={1,2,4,4,5,6,7,8,98};
-    Segment_Tree t(a,sizeof(a)/sizeof(int));
-    t.constructSegementTree();
-    cout<<t.getSum(2,4);
-
+    int a = 7, b = 5;
+    cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
     return 0;
 }

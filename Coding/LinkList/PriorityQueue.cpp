@@ -31,8 +31,8 @@ int main()
 {
     priority_queue<Point> gquiz;
 
-    gquiz.push(Point(1,2));    
-    gquiz.push(Point(2,3));
+    gquiz.push({1,2});    
+    gquiz.push({2,3});
     cout<<gquiz.top().x <<" "<<gquiz.top().y<<endl;
 
     return 0;
